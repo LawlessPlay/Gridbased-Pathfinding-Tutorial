@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/Finished/Part2/Scenes/Finsihed 2 - Grid Based Pathfinding.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
