@@ -13,9 +13,8 @@ namespace finished1
         public GameObject overlayPrefab;
         public GameObject overlayContainer;
 
-        public float littleBump;
-
         public Dictionary<Vector2Int, GameObject> map;
+        public bool ignoreBottomTiles;
 
         private void Awake()
         {
@@ -31,18 +30,20 @@ namespace finished1
         // Start is called before the first frame update
         void Start()
         {
-            littleBump = 0.0003f;
             var tileMap = gameObject.GetComponentInChildren<Tilemap>();
             map = new Dictionary<Vector2Int, GameObject>();
 
             BoundsInt bounds = tileMap.cellBounds;
 
-            for (int z = bounds.max.z; z > bounds.min.z; z--)
+            for (int z = bounds.max.z; z >= bounds.min.z; z--)
             {
                 for (int y = bounds.min.y; y < bounds.max.y; y++)
                 {
                     for (int x = bounds.min.x; x < bounds.max.x; x++)
                     {
+                        if (z == 0 && ignoreBottomTiles)
+                            return;
+
                         var tileLocation = new Vector3Int(x, y, z);
                         var tileKey = new Vector2Int(x, y);
                         if (tileMap.HasTile(tileLocation) && !map.ContainsKey(tileKey))

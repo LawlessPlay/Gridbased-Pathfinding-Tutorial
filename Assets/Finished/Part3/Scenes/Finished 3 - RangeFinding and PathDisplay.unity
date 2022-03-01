@@ -368,6 +368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overlayPrefab: {fileID: 8236925022526955805, guid: 73590fb3461fae64cbaf3ebc4e72352b, type: 3}
   overlayContainer: {fileID: 1338961238}
+  ignoreBottomTiles: 1
 --- !u!1 &1338961238
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ namespace finished2
         public bool isBlocked = false;
 
         public OverlayTile Previous;
+
         public Vector3Int gridLocation;
 
 

@@ -368,6 +368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overlayPrefab: {fileID: 8236925022526955805, guid: c4ecbb6ba8d43434781a43382ac1feac, type: 3}
   overlayContainer: {fileID: 1377666498}
+  ignoreBottomTiles: 1
 --- !u!1 &1338961238
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 65873167}
-  speed: 2
+  speed: 3
   characterPrefab: {fileID: 6688883963585979011, guid: bb7631f78eb15e441b29229ddcfc378a, type: 3}
 --- !u!4 &1377666500
 Transform:
